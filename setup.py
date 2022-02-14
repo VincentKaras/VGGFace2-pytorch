@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='VGGFace2-pytorch',
     version='1.0',
-    packages=['models', 'datasets'],
+    packages=find_packages(),
     url='https://github.com/VincentKaras/VGGFace2-pytorch',
     license='MIT',
     author='VincentKaras',

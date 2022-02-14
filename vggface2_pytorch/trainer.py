@@ -2,7 +2,6 @@ import datetime
 import math
 import os
 import shutil
-import psutil
 import gc
 import time
 

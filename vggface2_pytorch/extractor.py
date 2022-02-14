@@ -1,11 +1,9 @@
 import datetime
-import math
 import os
 import gc
 import time
 
 import numpy as np
-import torch
 from torch.autograd import Variable
 
 import utils

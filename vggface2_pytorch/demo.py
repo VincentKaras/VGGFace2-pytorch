@@ -2,13 +2,10 @@
 
 import argparse
 import os
-import sys
 import torch
 import torch.nn as nn
 
-import datasets
-import models.resnet as ResNet
-import models.senet as SENet
+from vggface2_pytorch import datasets
 from trainer import Trainer, Validator
 from extractor import Extractor
 import utils
@@ -105,9 +102,9 @@ def main():
     # 2. model
     include_top = True if args.cmd != 'extract' else False
     if 'resnet' in args.arch_type:
-        model = ResNet.resnet50(num_classes=N_IDENTITY, include_top=include_top)
+        model = resnet.resnet50(num_classes=N_IDENTITY, include_top=include_top)
     else:
-        model = SENet.senet50(num_classes=N_IDENTITY, include_top=include_top)
+        model = senet.senet50(num_classes=N_IDENTITY, include_top=include_top)
     # print(model)
 
     start_epoch = 0
